@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DTXDemo.unity
+    guid: fa401c8b2ad0cda45af8e8c7bd56b2ee
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: cbf88ede48b1c3548b5a4fd876403563, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0eb2f16ddbdce1f4e82e7ebc08a0ead0, type: 2}

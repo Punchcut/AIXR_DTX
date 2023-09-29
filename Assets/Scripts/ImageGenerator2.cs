@@ -4,8 +4,10 @@ using OpenAI;
 using OpenAI.Images;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ImageGenerator : MonoBehaviour
+
+public class ImageGenerator2 : MonoBehaviour
 {
+
     [Header("Inputs")]
     [SerializeField]
     [TextArea(5, 20)]
@@ -14,9 +16,10 @@ public class ImageGenerator : MonoBehaviour
     [SerializeField]
     private ImageSize imageSize = ImageSize.Medium;
 
-    [SerializeField] VoiceControllerForAI voiceController;
+    [SerializeField] VoiceController2 voiceController;
 
     private Transform selectedImage;
+    // Start is called before the first frame update
 
     public async void GenerateImage(string prompt, Transform transform, Action<Transform, Texture2D> callBack = null)
     {
@@ -44,13 +47,8 @@ public class ImageGenerator : MonoBehaviour
     {
         Debug.Log(args.interactableObject.transform.name);
         selectedImage = args.interactableObject.transform;
-
     }
 
-    public void OnFrameSelected(SelectEnterEventArgs args)
-    {
-        voiceController.ActivateVoice(args.interactableObject.transform);
-    }
     public void OnButtonClicked()
     {
         voiceController.ActivateVoice(selectedImage);
